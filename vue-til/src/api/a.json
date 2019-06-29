@@ -1,0 +1,6 @@
+{
+  "success": true,
+  "user": { "username": "test@abc.com", "nickname": "Test1" },
+  "message": "Login Success",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RAYWJjLmNvbSIsIl9pZCI6IjVkMTcwZTBhYjMwOTJkN2ViZTNhZWM3YyIsImlhdCI6MTU2MTc5MjMyNSwiZXhwIjoxNTcwNDMyMzI1fQ.HirsJYvzq-57k2xsx-AZS4hdpb1yzWttcyBJM3z2BEc"
+}

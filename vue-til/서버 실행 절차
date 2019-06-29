@@ -1,0 +1,6 @@
+[서버 실행 절차]
+server 폴더에서
+npm i 
+npm i swagger-ui-express
+npm run dev
+http://localhost:3000/api/docs/

@@ -1,0 +1,9 @@
+vue create vue-til
+- babel
+- pwa
+- linter
+- unit testing
+eslint + prettier
+lint on save
+jest
+dedicated config files

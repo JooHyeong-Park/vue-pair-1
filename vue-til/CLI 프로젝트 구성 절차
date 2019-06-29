@@ -1,0 +1,4 @@
+[Vue CLI로 생성한 프로젝트 작업 절차]
+1. npm i axios vue-router vuex
+2. npm run serve
+
