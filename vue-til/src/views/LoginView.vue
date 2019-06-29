@@ -31,6 +31,7 @@ export default {
         password: this.password
       })
         .then(response => {
+          this.$store.commit("SET_TOKEN", response.data.token);
           console.log(response.data);
         })
         .catch(error => {

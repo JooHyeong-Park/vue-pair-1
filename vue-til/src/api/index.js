@@ -1,12 +1,20 @@
 import axios from "axios";
+import store from "../store/index.js";
 
 function createInstance(options) {
+  let header;
+  if (store.state.token !== undefined) {
+    header = {
+      Authorization: store.state.token
+    };
+  } else {
+    header = {};
+  }
+
   return axios.create({
     baseURL: "http://localhost:3000/",
-    headers: {
-      Authorization: "hello"
-    },
-    ...options
+    headers: header
+    // ...options
   });
 }
 
@@ -17,6 +25,7 @@ function registerUser(userData) {
 }
 
 function loginUser(loginData) {
+  store.commit("SET_TOKEN", loginData.token);
   return instance.post("login", loginData);
 }
 

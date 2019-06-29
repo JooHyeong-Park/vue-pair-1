@@ -13,7 +13,10 @@ import posts from "./api/posts.js";
 import docs from "./utils/api-doc.js";
 
 // utils
-import { authenticateUser } from "./utils/auth.js";
+import {
+  authenticateUser
+} from "./utils/auth.js";
+
 function log() {
   [...arguments].forEach(val => console.log(chalk.cyan(val)));
 }
@@ -22,8 +25,9 @@ function log() {
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 mongoose.connect(
-  "mongodb://test1234:test1234@ds155596.mlab.com:55596/vue-til",
-  { useNewUrlParser: true }
+  "mongodb+srv://test:1234@cluster0-bwtkc.mongodb.net/test?retryWrites=true&w=majority", {
+    useNewUrlParser: true
+  }
 );
 mongoose.Promise = global.Promise;
 
@@ -37,7 +41,9 @@ configServer();
 // express setup
 const app = express();
 app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(bodyParser.json());
 app.use(morgan("dev")); // log request
 
